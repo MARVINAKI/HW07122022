@@ -89,8 +89,6 @@ public class Main {
         chess.printChessBoard();
 
 
-
-
         ListOfProducts listOfProducts = new ListOfProducts();
 
         Product banana = new Product("Банан", 50, 1);
@@ -120,6 +118,16 @@ public class Main {
 
 
         TeacherEx ex = new TeacherEx();
-        ex.printEx();
+//        ex.printEx();
+
+
+        ListOfPassport listOfPassport = new ListOfPassport();
+        Passport pass1, pass2, pass3;
+        listOfPassport.addToList(pass1 = new Passport("A123", "Ivanov", "Ivan", "Ivanovich", 19052000));
+        listOfPassport.addToList(pass2 = new Passport("A1234", "Petrov", "Petr", 27031990));
+        listOfPassport.addToList(pass3 = new Passport("A1237", "Ivanov", "Ivan", "Ivanovich", 19052000));
+//        listOfPassport.findPass("A  1  2   34   ");
+////        System.out.println(listOfPassport);
+
     }
 }

@@ -206,13 +206,14 @@ public class Car
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Car<?> car = (Car<?>) o;
         return statusCarDiag == car.statusCarDiag && prizeMoney == car.prizeMoney && carType == car.carType && bodyTypePass == car.bodyTypePass && loadCapacity == car.loadCapacity && passCapacity == car.passCapacity && driver.equals(car.driver) && sponsors.equals(car.sponsors) && mechanics.equals(car.mechanics);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(carType, bodyTypePass, loadCapacity, passCapacity, statusCarDiag, prizeMoney, driver, sponsors, mechanics);
+        return Objects.hash(super.hashCode(), carType, bodyTypePass, loadCapacity, passCapacity, statusCarDiag, prizeMoney, driver, sponsors, mechanics);
     }
 
     @Override
