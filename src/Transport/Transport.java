@@ -2,6 +2,8 @@ package Transport;
 
 import Transport.Car.Car;
 
+import java.util.Objects;
+
 public abstract class Transport {
     private String brand;
     private String model;
@@ -49,6 +51,19 @@ public abstract class Transport {
     public final void setEngineVolume(double engineVolume) {
         double scale = Math.pow(10, 2);
         this.engineVolume = engineVolume; // ЗНАКИ ПОСЛЕ ЗАПЯТОЙ!!!
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Transport transport = (Transport) o;
+        return Double.compare(transport.engineVolume, engineVolume) == 0 && brand.equals(transport.brand) && model.equals(transport.model);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, model, engineVolume);
     }
 
     @Override

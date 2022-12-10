@@ -5,9 +5,11 @@ import Transport.Car.Enums.CarType;
 import Transport.Car.MyException.NotDiagException;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Garage {
-    private ArrayList<Car> listOfCar = new ArrayList<>();
+    private Set<Car> listOfCar = new HashSet<>();
 
     public void addToGarage(Car car) {
         this.listOfCar.add(car);
@@ -28,7 +30,7 @@ public class Garage {
         }
     }
 
-    public final ArrayList<Car> getListOfCar() {
+    public final Set<Car> getListOfCar() {
         return listOfCar;
     }
 
