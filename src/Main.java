@@ -118,5 +118,8 @@ public class Main {
         Numbers numbers = new Numbers();
 //        numbers.fillingAndPrint();
 
+
+        TeacherEx ex = new TeacherEx();
+        ex.printEx();
     }
 }
