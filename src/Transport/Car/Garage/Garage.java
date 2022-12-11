@@ -15,6 +15,16 @@ public class Garage {
         this.listOfCar.add(car);
     }
 
+    public void delCar(Car... car) {
+        for (Car carInGarage : listOfCar) {
+            for (Car carForDel : car) {
+                if (carForDel==carInGarage) {
+                    listOfCar.remove(car);
+                }
+            }
+        }
+    }
+
     public void checkCarDiag() {
         for (Car car : listOfCar) {
             if (car.getCarType() == CarType.BUS) {
