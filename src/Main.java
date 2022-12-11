@@ -44,6 +44,10 @@ public class Main {
         garage.addToGarage(car11 = new Car("brand11", "model11", 2, CarType.BUS, PassCapacity.BIG));
         garage.addToGarage(car12 = new Car("brand12", "model12", 2, CarType.BUS, PassCapacity.VERY_BIG));
 
+
+        System.out.println(garage);
+        garage.delCar(car1,car2);
+        System.out.println(garage);
         ListOfDriver listOfDriver = new ListOfDriver();
         Driver driver1, driver2;
         listOfDriver.addToList(driver1 = new Driver("Александр", DriverLic.CAT_B, 17));
